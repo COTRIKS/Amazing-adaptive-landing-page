@@ -1,0 +1,1743 @@
+@media screen and (max-width: 1400px){
+  // Popup window
+  .popup{
+    width: 450px;
+    height: 130px;
+    padding: 20px 10px;
+    &:before{
+      left: -31px;
+      border-top: 15px solid transparent;
+      border-right: 30px solid $anotherColor;
+      border-bottom: 15px solid transparent;
+    }
+    &__text{
+      @include textDecor($darkColor, 17px, $textStyle1, 500, uppercase, none, 0.05em, 1.3em);
+    }
+    &__yes, &__no{
+      width: 70px;
+      height: 35px;
+      border: 2px solid $basicColor;
+      @include textDecor($darkColor, 14px, $textStyle2, 500, uppercase, none, 0.05em, 0);
+    }
+  }
+
+  // Header
+  .header{
+    &__row{
+      padding-bottom: 110px;
+    }
+    &__menu{
+      padding: 40px 0 0;
+    }
+    &__logo{
+      width: 60px;
+    }
+    &__list{
+      li{
+        margin-right: 20px;
+        &:nth-child(even){
+          font-size: 17px;
+          font-weight: 600;
+        }
+        a{
+          @include textDecor($lightColor, 13px, $textStyle1, 400, uppercase, none, 0.2em, 0);
+        }
+      }
+    }
+    &__title{
+      @include textDecor($lightColor, 37px, $textStyle2, 300, uppercase, none, 0.1em, 1.8em);
+      .heading{
+        font-size: 50px;
+      }
+    }
+    &__btn{
+      width: 230px;
+      height: 55px;
+      @include textDecor($darkColor, 19px, $textStyle2, 600, uppercase, none, 0.15em, 0);
+    }
+    .downBtn{
+      font-size: 55px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .theme{
+    @include textDecor($darkColor, 23px, $textStyle2, 600, uppercase, none, 0.05em, 0);
+  }
+
+  .container{
+    max-width: 960px;
+  }
+
+  // Popup window
+  .popup{
+    width: 300px;
+    height: 90px;
+    padding: 15px 10px;
+    left: 3.5%;
+    bottom: 9%;
+    justify-content: space-between;
+    &:before{
+      top: 14%;
+      left: -21px;
+      border-top: 10px solid transparent;
+      border-right: 20px solid $anotherColor;
+      border-bottom: 10px solid transparent;
+    }
+    &__text{
+      @include textDecor($darkColor, 12px, $textStyle1, 400, uppercase, none, 0.05em, 1.3em);
+    }
+    &__yes, &__no{
+      width: 50px;
+      height: 25px;
+      @include textDecor($darkColor, 10px, $textStyle2, 400, uppercase, none, 0.05em, 0);
+    }
+  }
+
+  // Header
+  .header{
+    &__row{
+      padding-bottom: 90px;
+    }
+    &__menu{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      padding: 0 30px;
+      z-index: 105;
+      transition: background .4s;
+    }
+    .menu-scroll{
+      background: rgb(140, 155, 240);
+    }
+    &__logo{
+      width: 50px;
+      transition: .4s;
+    }
+    .look-logo{
+      opacity: 0;
+    }
+    &__burger{
+      display: flex;
+    }
+    .open-close{
+      transform: translateX(-40px);
+      background: transparent;
+      &:before{
+        transform: translate(40px, 15px) rotate(45deg);
+      }
+      &:after{
+        transform: translate(40px, -15px) rotate(-45deg);
+      }
+    }
+    &__nav{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgb(140, 155, 240);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translateX(100%);
+      transition: .4s;
+      z-index: -1;
+    }
+    &__list{
+      flex-direction: column;
+      li{
+        margin-right: 0;
+        margin-bottom: 30px;
+        &:nth-child(even){
+          display: none;
+        }
+        &:last-child{
+          margin-bottom: 0;
+        }
+        a{
+          @include textDecor($lightColor, 16px, $textStyle1, 400, uppercase, none, 0.2em, 0);
+        }
+      }
+    }
+    .go-back{
+      transform: translateX(0);
+    }
+    &__for-menu{
+      display: block;
+      height: 80px;
+    }
+    &__title{
+      @include textDecor($lightColor, 27px, $textStyle2, 300, uppercase, none, 0.1em, 1.8em);
+      .heading{
+        font-size: 40px;
+      }
+    }
+    &__btn{
+      width: 160px;
+      height: 40px;
+      @include textDecor($darkColor, 14px, $textStyle2, 500, uppercase, none, 0.15em, 0);
+    }
+    .downBtn{
+      font-size: 40px;
+    }
+  }
+
+  // About us
+  .about{
+    padding: 70px 0 110px;
+    .begin{
+      margin-bottom: 70px;
+      h2{
+        margin-right: 12px;
+      }
+      &__line{
+        margin-right: 12px;
+      }
+      &__text{
+        @include textDecor($darkColor, 13px, $textStyle2, 500, uppercase, none, 0.1em, 1.3em);
+      }
+    }
+
+    .story{
+      &__content{
+        i{
+          min-width: 70px;
+          height: 70px;
+          border: 2px solid $anotherColor;
+          font-size: 25px;
+        }
+      }
+      &__info{
+        padding: 0 40px;
+      }
+      &__topic{
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 15px;
+      }
+      &__subtopic{
+        @include textDecor($basicColor, 15px, $textStyle2, 400, none, none, 0.05em, 1.3em);
+        margin-bottom: 15px;
+      }
+      &__text{
+        @include textDecor($darkColor, 15px, $textStyle2, 400, none, none, 0.05em, 1.3em);
+      }
+      &__img{
+        img{
+          transform: translate(0, 0);
+        }
+      }
+    }
+
+    .skills{
+      &__img{
+        img{
+          transform: translate(0, 0);
+        }
+      }
+      &__content{
+        i{
+          min-width: 70px;
+          height: 70px;
+          font-size: 25px;
+        }
+      }
+      &__topic{
+        font-size: 16px;
+        font-weight: 500;
+      }
+      &__text{
+        @include textDecor($darkColor, 15px, $textStyle2, 400, none, none, 0.05em, 1.3em);
+      }
+      &__grafic{
+        p{
+          span{
+            @include textDecor($darkColor, 15px, $textStyle1, 600, uppercase, none, 0.05em, 0);
+          }
+        }
+        .grafic-line{
+          height: 2px;
+        }
+      }
+    }
+  }
+
+  // Quote block
+  .quote{
+    padding-bottom: 35px;
+    &__case{
+      height: 450px;
+    }
+    &__citation{
+      @include textDecor($lightColor, 35px, $textStyle2, 400, none, none, 0.05em, 1.4em);
+      padding: 0 100px;
+      margin-bottom: 15px;
+    }
+    &__line{
+      width: 40px;
+      height: 2px;
+      margin-bottom: 20px;
+    }
+    &__text{
+      @include textDecor($lightColor, 16px, $textStyle1, 500, uppercase, none, 0.15em, 0);
+    }
+  }
+
+  // Team
+  .team{
+    padding: 70px 0 110px;
+    .begin{
+      margin-bottom: 70px;
+      h2{
+        margin-right: 12px;
+      }
+      &__line{
+        width: 5px;
+        margin-right: 12px;
+      }
+      &__text{
+        @include textDecor($darkColor, 13px, $textStyle2, 500, uppercase, none, 0.1em, 1.3em);
+      }
+    }
+
+    .members{
+      &__block{
+        width: 250px;
+        height: 350px;
+        padding: 15px 10px;
+        &:hover{
+          &:before{
+            border-top: 2px solid $anotherColor;
+          }
+        }
+      }
+      &__icon{
+        width: 110px;
+        height: 110px;
+        font-size: 28px;
+        border: 2px solid rgb(167, 167, 167);
+      }
+      &__name{
+        @include textDecor($darkColor, 14px, $textStyle1, 700, uppercase, none, 0.1em, 0);
+      }
+      &__work{
+        @include textDecor(rgb(167, 167, 167), 12px, $textStyle2, 500, none, none, 0.05em, 0);
+      }
+      &__line{
+        height: 2px;
+      }
+      &__text{
+        @include textDecor(rgb(167, 167, 167), 14px, $textStyle2, 400, none, none, 0.05em, 1.3em);
+      }
+      &__links{
+        a{
+          font-size: 17px;
+          margin-right: 13px;
+        }
+      }
+    }
+  }
+
+  // Audience
+  .audience{
+    padding-bottom: 35px;
+    &__case{
+      height: 450px;
+    }
+    &__info{
+      padding: 20px;
+      &:hover{
+        i{
+          border: 2px solid $lightColor;
+        }
+      }
+      i{
+        width: 100px;
+        height: 100px;
+        font-size: 23px;
+      }
+    }
+    &__numbers{
+      @include textDecor($lightColor, 27px, $textStyle1, 700, uppercase, none, 0.1em, 1);
+    }
+    &__profit{
+      @include textDecor($lightColor, 18px, $textStyle2, 500, none, none, 0.05em, 1);
+    }
+  }
+
+  // Service
+  .service{
+    padding: 70px 0 110px;
+    .begin{
+      margin-bottom: 80px;
+      h2{
+        margin-right: 12px;
+      }
+      &__line{
+        margin-right: 12px;
+      }
+      &__text{
+        @include textDecor($darkColor, 13px, $textStyle2, 500, uppercase, none, 0.1em, 1.3em);
+      }
+    }
+
+    .doings{
+      &__block{
+        padding: 0 22px;
+      }
+      &__icon{
+        font-size: 22px;
+        margin-bottom: 20px;
+      }
+      &__topic{
+        @include textDecor($darkColor, 15px, $textStyle2, 600, uppercase, none, 0.1em, 1);
+      }
+      &__text{
+        @include textDecor(rgb(167, 167, 167), 14px, $textStyle2, 400, none, none, 0.05em, 1.3em);
+      }
+    }
+    
+    .price{
+      &__icon{
+        width: 100px;
+        height: 100px;
+        font-size: 22px;
+      }
+      &__topic{
+        @include textDecor($darkColor, 15px, $textStyle2, 600, uppercase, none, 0.1em, 1);
+      }
+      &__text{
+        @include textDecor(rgb(167, 167, 167), 14px, $textStyle2, 400, none, none, 0.05em, 1.3em);
+      }
+      .tariffs{
+        &__basic, &__gold, &__silver{
+          width: 210px;
+          height: 370px;
+        }
+        &__gold{
+          height: 400px;
+        }
+        &__title{
+          @include textDecor($darkColor, 18px, $textStyle2, 600, uppercase, none, 0.05em, 1);
+          margin-bottom: 8px;
+        }
+        &__line{
+          margin-bottom: 8px;
+        }
+        &__cost{
+          @include textDecor($darkColor, 18px, $textStyle2, 600, uppercase, none, 0.05em, 1);
+        }
+        &__list{
+          li{
+            @include textDecor(rgb(167, 167, 167), 13px, $textStyle2, 400, capitalize, none, 0.1em, 0);
+          }
+        }
+        &__btn{
+          @include textDecor($darkColor, 13px, $textStyle2, 600, uppercase, none, 0.05em, 0);
+        }
+      }
+    }
+  }
+
+  // Clients
+  .company{
+    padding-bottom: 35px;
+    &__case{
+      height: 450px;
+    }
+    &__topic{
+      @include textDecor($lightColor, 22px, $textStyle1, 600, uppercase, none, 0.1em, 0);
+    }
+    &__logos{
+      img{
+        width: 170px;
+        padding: 30px;
+      }
+    }
+  }
+
+  // Contact
+  .contact{
+    padding: 70px 0;
+    .begin{
+      margin-bottom: 80px;
+      h2{
+        margin-right: 12px;
+      }
+      &__line{
+        margin-right: 12px;
+      }
+      &__text{
+        @include textDecor($darkColor, 13px, $textStyle2, 500, uppercase, none, 0.1em, 1.3em);
+      }
+    }
+
+    .information{
+      &__topic{
+        @include textDecor($darkColor, 16px, $textStyle2, 600, uppercase, none, 0.05em, 1);
+        margin-bottom: 15px;
+      }
+      &__third-form{
+        margin-bottom: 20px;
+      }
+      &__input{
+        height: 45px;
+        padding: 10px 50px 10px 10px;
+        @include textDecor($darkColor, 14px, $textStyle1, 400, none, none, 0.05em, 1.3em);
+        border: 2px solid rgb(201, 201, 201);
+      }
+      &__label{
+        width: 35px;
+        i{
+          font-size: 16px;
+        }
+      }
+      &__textarea{
+        height: 170px;
+        padding: 10px 50px 10px 10px;
+        @include textDecor($darkColor, 14px, $textStyle1, 400, none, none, 0.05em, 1.3em);
+        border: 2px solid rgb(201, 201, 201);
+      }
+      &__btn{
+        width: 130px;
+        height: 40px;
+        border: 2px solid $basicColor;
+        @include textDecor($darkColor, 15px, $textStyle2, 600, uppercase, none, 0.05em, 0);
+      }
+      &__address{
+        padding-left: 70px;
+      }
+      &__text{
+        @include textDecor(rgb(167, 167, 167), 14px, $textStyle2, 400, none, none, 0.05em, 1.3em);
+        margin-bottom: 15px;
+      }
+      &__info{
+        margin-bottom: 10px;
+      }
+      &__icon-info{
+        width: 32px;
+        height: 32px;
+        font-size: 13px;
+      }
+      &__text-info{
+        @include textDecor($darkColor, 15px, $textStyle2, 400, none, none, 0.1em, 0);
+      }
+    }
+  }
+
+  // Map
+  .map{
+    &__chart{
+      height: 450px;
+    }
+  }
+
+  // Footer
+  .footer{
+    padding: 40px;
+    &__text{
+      @include textDecor($darkColor, 15px, $textStyle2, 400, uppercase, none, 0.1em, 1);
+    }
+    &__links{
+      a{
+        font-size: 16px;
+        margin-left: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px){
+  .theme{
+    @include textDecor($darkColor, 20px, $textStyle2, 500, uppercase, none, 0.05em, 0);
+  }
+
+  .container{
+    max-width: 720px;
+  }
+  
+  // Popup window
+  .popup{
+    width: 260px;
+    height: 80px;
+    padding: 13px 7px;
+    left: 3%;
+    bottom: 7%;
+    &:before{
+      left: -17px;
+      border-top: 8px solid transparent;
+      border-right: 16px solid $anotherColor;
+      border-bottom: 8px solid transparent;
+    }
+    &__text{
+      @include textDecor($darkColor, 10px, $textStyle1, 400, uppercase, none, 0.05em, 1.3em);
+    }
+    &__yes, &__no{
+      width: 40px;
+      height: 20px;
+      border: 1px solid $basicColor;
+      @include textDecor($darkColor, 9px, $textStyle2, 400, uppercase, none, 0.05em, 0);
+    }
+  }
+
+  // Header
+  .header{
+    &__row{
+      padding-bottom: 80px;
+    }
+    &__logo{
+      width: 45px;
+    }
+    &__title{
+      @include textDecor($lightColor, 24px, $textStyle2, 300, uppercase, none, 0.1em, 1.8em);
+      .heading{
+        font-size: 37px;
+      }
+    }
+    &__btn{
+      width: 140px;
+      height: 37px;
+      @include textDecor($darkColor, 13px, $textStyle2, 500, uppercase, none, 0.15em, 0);
+    }
+    .downBtn{
+      font-size: 37px;
+    }
+  }
+
+  // About us
+  .about{
+    padding: 60px 0 90px;
+    .begin{
+      margin-bottom: 60px;
+      h2{
+        margin-right: 10px;
+      }
+      &__line{
+        width: 3px;
+        margin-right: 10px;
+      }
+      &__text{
+        @include textDecor($darkColor, 12.5px, $textStyle2, 400, uppercase, none, 0.1em, 1.3em);
+      }
+    }
+
+    .story{
+      flex-direction: column;
+      &__content{
+        width: 100%;
+        order: 2;
+      }
+      &__info{
+        padding: 0 0 0 40px;
+      }
+      &__img{
+        width: 100%;
+        order: 1;
+        margin-bottom: 50px;
+      }
+    }
+
+    .skills{
+      flex-direction: column;
+      &__img{
+        width: 100%;
+        margin-bottom: 50px;
+      }
+      &__all{
+        width: 100%;
+        padding-left: 0;
+      }
+      &__text{
+        @include textDecor($darkColor, 15px, $textStyle2, 400, none, none, 0.05em, 1.3em);
+      }
+      &__grafic{
+        p{
+          span{
+            @include textDecor($darkColor, 14px, $textStyle1, 600, uppercase, none, 0.05em, 0);
+          }
+        }
+        .grafic-line{
+          height: 2px;
+        }
+      }
+    }
+  }
+
+  // Quote block
+  .quote{
+    padding-bottom: 25px;
+    &__case{
+      height: 350px;
+    }
+    &__citation{
+      @include textDecor($lightColor, 27px, $textStyle2, 400, none, none, 0.05em, 1.4em);
+      padding: 0 50px;
+      margin-bottom: 10px;
+    }
+    &__text{
+      @include textDecor($lightColor, 13px, $textStyle1, 400, uppercase, none, 0.15em, 0);
+    }
+  }
+
+  // Team
+  .team{
+    padding: 60px 0 90px;
+    .begin{
+      margin-bottom: 60px;
+      h2{
+        margin-right: 10px;
+      }
+      &__line{
+        width: 3px;
+        margin-right: 10px;
+      }
+      &__text{
+        @include textDecor($darkColor, 12.5px, $textStyle2, 400, uppercase, none, 0.1em, 1.3em);
+      }
+    }
+
+    .members{
+      flex-wrap: wrap;
+      justify-content: space-around;
+      &__block{
+        &:nth-child(1), &:nth-child(2){
+          margin-bottom: 50px;
+        }
+      }
+    }
+  }
+
+  // Audience
+  .audience{
+    padding-bottom: 25px;
+    &__case{
+      height: 350px;
+    }
+    &__info{
+      padding: 10px;
+      i{
+        width: 80px;
+        height: 80px;
+        font-size: 18px;
+        margin-bottom: 12px;
+      }
+    }
+    &__numbers{
+      @include textDecor($lightColor, 23px, $textStyle1, 600, uppercase, none, 0.1em, 1);
+    }
+    &__profit{
+      @include textDecor($lightColor, 16px, $textStyle2, 500, none, none, 0.05em, 1);
+    }
+  }
+
+  // Service
+  .service{
+    padding: 60px 0 90px;
+    .begin{
+      margin-bottom: 60px;
+      h2{
+        margin-right: 10px;
+      }
+      &__line{
+        width: 3px;
+        margin-right: 10px;
+      }
+      &__text{
+        @include textDecor($darkColor, 12.5px, $textStyle2, 400, uppercase, none, 0.1em, 1.3em);
+      }
+    }
+
+    .doings{
+      &__block{
+        padding: 0 15px;
+      }
+      &__icon{
+        width: 75px;
+        height: 75px;
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+      &__topic{
+        @include textDecor($darkColor, 14px, $textStyle2, 500, uppercase, none, 0.1em, 1);
+        margin-bottom: 10px;
+      }
+      &__text{
+        @include textDecor(rgb(167, 167, 167), 13px, $textStyle2, 400, none, none, 0.05em, 1.3em);
+      }
+    }
+    
+    .price{
+      flex-direction: column;
+      &__description{
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 50px;
+      }
+      &__icon{
+        width: 90px;
+        height: 90px;
+        font-size: 20px;
+      }
+      &__text{
+        @include textDecor(rgb(167, 167, 167), 13.6px, $textStyle2, 400, none, none, 0.05em, 1.3em);
+      }
+      .tariffs{
+        width: 100%;
+        justify-content: center;
+        &__basic, &__gold, &__silver{
+          width: 230px;
+          height: 390px;
+        }
+        &__gold{
+          height: 420px;
+        }
+      }
+    }
+  }
+
+  // Clients
+  .company{
+    padding-bottom: 25px;
+    &__case{
+      height: 350px;
+    }
+    &__topic{
+      @include textDecor($lightColor, 20px, $textStyle1, 500, uppercase, none, 0.1em, 0);
+      margin-bottom: 45px;
+    }
+    &__logos{
+      img{
+        width: 150px;
+        height: 90px;
+        padding: 30px;
+      }
+    }
+  }
+
+  // Contact
+  .contact{
+    padding: 60px 0;
+    .begin{
+      margin-bottom: 60px;
+      h2{
+        margin-right: 10px;
+      }
+      &__line{
+        width: 3px;
+        margin-right: 10px;
+      }
+      &__text{
+        @include textDecor($darkColor, 12.5px, $textStyle2, 400, uppercase, none, 0.1em, 1.3em);
+      }
+    }
+
+    .information{
+      flex-direction: column;
+      &__enter{
+        width: 100%;
+        margin-bottom: 50px;
+      }
+      &__address{
+        width: 100%;
+        padding-left: 0;
+      }
+    }
+  }
+
+  // Map
+  .map{
+    &__chart{
+      height: 350px;
+    }
+  }
+
+  // Footer
+  .footer{
+    padding: 30px;
+    &__text{
+      @include textDecor($darkColor, 13px, $textStyle2, 400, uppercase, none, 0.1em, 1);
+    }
+    &__links{
+      a{
+        font-size: 14px;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px){
+  .theme{
+    @include textDecor($darkColor, 17px, $textStyle2, 500, uppercase, none, 0.05em, 0);
+  }
+
+  .container{
+    max-width: 540px;
+  }
+  
+  .delimiter{
+    margin-top: 60px;
+  }
+
+  // Popup window
+  .popup{
+    width: 65%;
+    height: 100px;
+    bottom: 5%;
+    &__text{
+      @include textDecor($darkColor, 13px, $textStyle1, 400, uppercase, none, 0.05em, 1.3em);
+    }
+    &__links{
+      justify-content: space-between;
+    }
+    &__yes, &__no{
+      width: 80px;
+      height: 35px;
+      @include textDecor($darkColor, 11px, $textStyle2, 400, uppercase, none, 0.05em, 0);
+    }
+  }
+
+  // Header
+  .header{
+    &__row{
+      padding-bottom: 70px;
+    }
+    &__logo{
+      width: 45px;
+    }
+    &__title{
+      @include textDecor($lightColor, 19px, $textStyle2, 300, uppercase, none, 0.1em, 1.8em);
+      .heading{
+        font-size: 27px;
+      }
+    }
+    &__btn{
+      width: 130px;
+      @include textDecor($darkColor, 12px, $textStyle2, 500, uppercase, none, 0.15em, 0);
+    }
+  }
+
+  // About us
+  .about{
+    padding: 50px 0 80px;
+    .begin{
+      margin-bottom: 50px;
+      h2{
+        margin-right: 8px;
+      }
+      &__line{
+        width: 2px;
+        margin-right: 8px;
+      }
+      &__text{
+        @include textDecor($darkColor, 10.5px, $textStyle2, 400, uppercase, none, 0.1em, 1.3em);
+      }
+    }
+
+    .story{
+      &__content{
+        i{
+          font-size: 23px;
+        }
+      }
+      &__info{
+        padding: 0 0 0 30px;
+      }
+      &__subtopic{
+        @include textDecor($basicColor, 13.5px, $textStyle2, 400, none, none, 0.05em, 1.3em);
+      }
+      &__text{
+        @include textDecor($darkColor, 13.5px, $textStyle2, 400, none, none, 0.05em, 1.3em);
+      }
+    }
+
+    .skills{
+      flex-direction: column;
+      margin-top: 60px;
+      &__content{
+        i{
+          font-size: 21px;
+        }
+      }
+      &__info{
+        padding-left: 30px;
+      }
+      &__text{
+        @include textDecor($darkColor, 13.5px, $textStyle2, 400, none, none, 0.05em, 1.3em);
+      }
+      &__grafic{
+        p{
+          font-size: 13px;
+          span{
+            @include textDecor($darkColor, 13px, $textStyle1, 600, uppercase, none, 0.05em, 0);
+          }
+        }
+      }
+    }
+  }
+
+  // Quote block
+  .quote{
+    padding-bottom: 20px;
+    &__case{
+      height: 300px;
+    }
+    &__citation{
+      @include textDecor($lightColor, 23px, $textStyle2, 400, none, none, 0.05em, 1.4em);
+      margin-bottom: 8px;
+    }
+    &__line{
+      margin-bottom: 15px;
+    }
+    &__text{
+      @include textDecor($lightColor, 10px, $textStyle1, 400, uppercase, none, 0.15em, 0);
+    }
+  }
+
+  // Team
+  .team{
+    padding: 50px 0 80px;
+    .begin{
+      margin-bottom: 50px;
+      h2{
+        margin-right: 8px;
+      }
+      &__line{
+        width: 2px;
+        margin-right: 8px;
+      }
+      &__text{
+        @include textDecor($darkColor, 10.5px, $textStyle2, 400, uppercase, none, 0.1em, 1.3em);
+      }
+    }
+
+    .members{
+      &__block{
+        width: 230px;
+        height: 330px;
+        padding: 20px 10px;
+      }
+      &__icon{
+        width: 100px;
+        height: 100px;
+        font-size: 25px;
+      }
+      &__name{
+        @include textDecor($darkColor, 13px, $textStyle1, 700, uppercase, none, 0.1em, 0);
+      }
+      &__work{
+        @include textDecor(rgb(167, 167, 167), 12px, $textStyle2, 500, none, none, 0.05em, 0);
+      }
+      &__text{
+        @include textDecor(rgb(167, 167, 167), 13px, $textStyle2, 400, none, none, 0.05em, 1.3em);
+      }
+      &__links{
+        a{
+          font-size: 14px;
+          margin-right: 12px;
+        }
+      }
+    }
+  }
+
+  // Audience
+  .audience{
+    padding-bottom: 20px;
+    &__case{
+      height: 300px;
+    }
+    &__info{
+      padding: 10px;
+      i{
+        width: 70px;
+        height: 70px;
+        font-size: 15px;
+        margin-bottom: 10px;
+      }
+    }
+    &__numbers{
+      @include textDecor($lightColor, 20px, $textStyle1, 600, uppercase, none, 0.1em, 1);
+    }
+    &__profit{
+      @include textDecor($lightColor, 14px, $textStyle2, 500, none, none, 0.05em, 1);
+    }
+  }
+
+  // Service
+  .service{
+    padding: 50px 0 80px;
+    .begin{
+      margin-bottom: 50px;
+      h2{
+        margin-right: 8px;
+      }
+      &__line{
+        width: 2px;
+        margin-right: 8px;
+      }
+      &__text{
+        @include textDecor($darkColor, 10.5px, $textStyle2, 400, uppercase, none, 0.1em, 1.3em);
+      }
+    }
+
+    .doings{
+      &__block{
+        padding: 0 6px;
+      }
+      &__icon{
+        width: 70px;
+        height: 70px;
+        font-size: 16px;
+      }
+      &__topic{
+        @include textDecor($darkColor, 13px, $textStyle2, 500, uppercase, none, 0.1em, 1);
+      }
+      &__text{
+        @include textDecor(rgb(167, 167, 167), 11px, $textStyle2, 400, none, none, 0.05em, 1.3em);
+      }
+    }
+    
+    .price{
+      margin-top: 60px;
+      &__icon{
+        width: 80px;
+        height: 80px;
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      &__topic{
+        @include textDecor($darkColor, 13px, $textStyle2, 600, uppercase, none, 0.1em, 1);
+      }
+      &__text{
+        @include textDecor(rgb(167, 167, 167), 11.6px, $textStyle2, 400, none, none, 0.05em, 1.3em);
+      }
+      .tariffs{
+        &__basic, &__gold, &__silver{
+          height: 340px;
+        }
+        &__gold{
+          height: 370px;
+        }
+        &__title{
+          @include textDecor($darkColor, 16px, $textStyle2, 500, uppercase, none, 0.05em, 1);
+          margin-bottom: 5px;
+        }
+        &__line{
+          margin-bottom: 5px;
+        }
+        &__cost{
+          @include textDecor($darkColor, 16px, $textStyle2, 500, uppercase, none, 0.05em, 1);
+        }
+        &__list{
+          li{
+            @include textDecor(rgb(167, 167, 167), 11px, $textStyle2, 400, capitalize, none, 0.1em, 0);
+          }
+        }
+        &__btn{
+          width: 110px;
+          height: 35px;
+          @include textDecor($darkColor, 11.5px, $textStyle2, 500, uppercase, none, 0.05em, 0);
+        }
+      }
+    }
+  }
+
+  // Clients
+  .company{
+    padding-bottom: 20px;
+    &__case{
+      height: 300px;
+    }
+    &__topic{
+      @include textDecor($lightColor, 18px, $textStyle1, 500, uppercase, none, 0.1em, 0);
+      margin-bottom: 35px;
+    }
+    &__logos{
+      img{
+        width: 120px;
+        height: 85px;
+        padding: 0 20px;
+      }
+    }
+  }
+
+  // Contact
+  .contact{
+    padding: 50px 0;
+    .begin{
+      margin-bottom: 50px;
+      h2{
+        margin-right: 8px;
+      }
+      &__line{
+        width: 2px;
+        margin-right: 8px;
+      }
+      &__text{
+        @include textDecor($darkColor, 10.5px, $textStyle2, 400, uppercase, none, 0.1em, 1.3em);
+      }
+    }
+
+    .information{
+      &__topic{
+        @include textDecor($darkColor, 14px, $textStyle2, 500, uppercase, none, 0.05em, 1);
+        margin-bottom: 10px;
+      }
+      &__third-form{
+        margin-bottom: 15px;
+        .information__label{
+          padding-top: 13px;
+        }
+      }
+      &__input{
+        height: 40px;
+        padding: 8px 46px 8px 8px;
+        @include textDecor($darkColor, 12px, $textStyle1, 400, none, none, 0.05em, 1.3em);
+      }
+      &__label{
+        width: 30px;
+        i{
+          font-size: 14px;
+        }
+      }
+      &__textarea{
+        height: 160px;
+        padding: 8px 46px 8px 8px;
+        @include textDecor($darkColor, 12px, $textStyle1, 400, none, none, 0.05em, 1.3em);
+      }
+      &__btn{
+        width: 110px;
+        height: 35px;
+        border: 2px solid $basicColor;
+        @include textDecor($darkColor, 13px, $textStyle2, 500, uppercase, none, 0.05em, 0);
+      }
+      &__text{
+        @include textDecor(rgb(167, 167, 167), 11.5px, $textStyle2, 400, none, none, 0.05em, 1.3em);
+        margin-bottom: 12px;
+      }
+      &__info{
+        margin-bottom: 8px;
+      }
+      &__icon-info{
+        margin-right: 8px;
+        font-size: 11.5px;
+      }
+      &__text-info{
+        @include textDecor($darkColor, 13px, $textStyle2, 400, none, none, 0.1em, 0);
+      }
+    }
+  }
+
+  // Map
+  .map{
+    &__chart{
+      height: 300px;
+    }
+  }
+
+  // Footer
+  .footer{
+    padding: 30px;
+    .container{
+      flex-direction: column;
+    }
+    &__text{
+      @include textDecor($darkColor, 13px, $textStyle2, 400, uppercase, none, 0.1em, 1);
+      margin-bottom: 20px;
+    }
+    &__links{
+      a{
+        margin-left: 12px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px){
+  .theme{
+    @include textDecor($darkColor, 14px, $textStyle2, 500, uppercase, none, 0.05em, 0);
+  }
+
+  .container{
+    max-width: 90%;
+  }
+  
+  .delimiter{
+    margin-top: 40px;
+  }
+
+  // Popup window
+  .popup{
+    width: 92%;
+    height: 80px;
+    left: 5%;
+    &__text{
+      @include textDecor($darkColor, 11px, $textStyle1, 400, uppercase, none, 0.05em, 1.3em);
+    }
+    &__links{
+      justify-content: space-around;
+    }
+    &__yes, &__no{
+      width: 50px;
+      height: 25px;
+      @include textDecor($darkColor, 10px, $textStyle2, 400, uppercase, none, 0.05em, 0);
+    }
+  }
+
+  // Header
+  .header{
+    &__row{
+      padding-bottom: 50px;
+    }
+    &__menu{
+      padding: 0 20px;
+      height: 70px;
+    }
+    &__logo{
+      width: 35px;
+    }
+    &__burger{
+      width: 35px;
+      height: 31px;
+    }
+    &__burger-changer{
+      width: 35px;
+      height: 2px;
+      &:before{
+        top: -10px;
+      }
+      &:after{
+        top: 10px;
+      }
+    }
+    .open-close{
+      transform: translateX(-35px);
+      &:before{
+        transform: translate(35px, 10px) rotate(45deg);
+      }
+      &:after{
+        transform: translate(35px, -10px) rotate(-45deg);
+      }
+    }
+    &__list{
+      li{
+        margin-bottom: 25px;
+        a{
+          @include textDecor($lightColor, 14px, $textStyle1, 400, uppercase, none, 0.2em, 0);
+        }
+      }
+    }
+    &__for-menu{
+      height: 70px;
+    }
+    &__title{
+      @include textDecor($lightColor, 13px, $textStyle2, 300, uppercase, none, 0.1em, 1.8em);
+      .heading{
+        font-size: 15px;
+      }
+    }
+    &__btn{
+      width: 100px;
+      height: 30px;
+      @include textDecor($darkColor, 10px, $textStyle2, 400, uppercase, none, 0.15em, 0);
+    }
+    .downBtn{
+      font-size: 30px;
+    }
+  }
+
+  // About us
+  .about{
+    padding: 30px 0 50px;
+    .begin{
+      margin-bottom: 30px;
+      h2{
+        margin-right: 5px;
+      }
+      &__line{
+        width: 1px;
+        margin-right: 7px;
+      }
+      &__text{
+        @include textDecor($darkColor, 8px, $textStyle2, 400, uppercase, none, 0.1em, 1.3em);
+      }
+    }
+
+    .story{
+      &__content{
+        i{
+          min-width: 50px;
+          height: 50px;
+          border: 1px solid $anotherColor;
+          font-size: 15px;
+        }
+      }
+      &__info{
+        padding: 0 0 0 15px;
+      }
+      &__topic{
+        font-size: 11px;
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+      &__subtopic{
+        @include textDecor($basicColor, 10px, $textStyle2, 400, none, none, 0.05em, 1.3em);
+        margin-bottom: 15px;
+      }
+      &__text{
+        @include textDecor($darkColor, 10px, $textStyle2, 400, none, none, 0.05em, 1.3em);
+      }
+      &__img{
+        margin-bottom: 30px;
+      }
+    }
+
+    .skills{
+      margin-top: 40px;
+      &__img{
+        margin-bottom: 30px;
+      }
+      &__content{
+        margin-bottom: 25px;
+        i{
+          min-width: 50px;
+          height: 50px;
+          border: 1px solid $anotherColor;
+          font-size: 14px;
+        }
+      }
+      &__info{
+        padding-left: 15px;
+      }
+      &__topic{
+        font-size: 11px;
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+      &__text{
+        @include textDecor($darkColor, 10px, $textStyle2, 400, none, none, 0.05em, 1.3em);
+      }
+      &__grafic{
+        p{
+          font-size: 11px;
+          margin-bottom: 7px;
+          span{
+            @include textDecor($darkColor, 11px, $textStyle1, 600, uppercase, none, 0.05em, 0);
+            margin-right: 5px;
+          }
+        }
+        .grafic-line{
+          height: 1px;
+        }
+      }
+    }
+  }
+
+  // Quote block
+  .quote{
+    padding-bottom: 10px;
+    &__case{
+      height: 250px;
+    }
+    &__citation{
+      @include textDecor($lightColor, 16px, $textStyle2, 400, none, none, 0.05em, 1.4em);
+    }
+    &__line{
+      height: 1px;
+    }
+    &__text{
+      @include textDecor($lightColor, 8px, $textStyle1, 400, uppercase, none, 0.15em, 0);
+    }
+  }
+
+  // Team
+  .team{
+    padding: 30px 0 50px;
+    .begin{
+      margin-bottom: 30px;
+      h2{
+        margin-right: 5px;
+      }
+      &__line{
+        width: 1px;
+        margin-right: 7px;
+      }
+      &__text{
+        @include textDecor($darkColor, 8px, $textStyle2, 400, uppercase, none, 0.1em, 1.3em);
+      }
+    }
+
+    .members{
+      justify-content: center;
+      &__block{
+        width: 200px;
+        height: 310px;
+        padding: 20px 10px;
+        &:nth-child(1), &:nth-child(2), &:nth-child(3){
+          margin-bottom: 30px;
+        }
+        &:hover{
+          &:before{
+            border-top: 1px solid $anotherColor;
+          }
+        }
+      }
+      &__icon{
+        width: 90px;
+        height: 90px;
+        font-size: 20px;
+        border: 1px solid rgb(167, 167, 167);
+      }
+      &__name{
+        @include textDecor($darkColor, 10px, $textStyle1, 700, uppercase, none, 0.1em, 0);
+      }
+      &__work{
+        @include textDecor(rgb(167, 167, 167), 10px, $textStyle2, 500, none, none, 0.05em, 0);
+      }
+      &__line{
+        height: 1px;
+      }
+      &__text{
+        @include textDecor(rgb(167, 167, 167), 10px, $textStyle2, 400, none, none, 0.05em, 1.3em);
+      }
+      &__links{
+        a{
+          font-size: 12px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  // Audience
+  .audience{
+    padding-bottom: 10px;
+    &__case{
+      height: 250px;
+    }
+    .container{
+      justify-content: space-around;
+    }
+    &__info{
+      padding: 5px;
+      &:hover{
+        i{
+          border: 1px solid $lightColor;
+        }
+      }
+      i{
+        width: 50px;
+        height: 50px;
+        font-size: 10px;
+        border: 1px solid $anotherColor;
+      }
+    }
+    &__numbers{
+      @include textDecor($lightColor, 16px, $textStyle1, 500, uppercase, none, 0.1em, 1);
+    }
+    &__profit{
+      @include textDecor($lightColor, 12px, $textStyle2, 400, none, none, 0.05em, 1);
+    }
+  }
+
+  // Service
+  .service{
+    padding: 30px 0 50px;
+    .begin{
+      margin-bottom: 30px;
+      h2{
+        margin-right: 5px;
+      }
+      &__line{
+        width: 1px;
+        margin-right: 7px;
+      }
+      &__text{
+        @include textDecor($darkColor, 8px, $textStyle2, 400, uppercase, none, 0.1em, 1.3em);
+      }
+    }
+
+    .doings{
+      flex-direction: column;
+      &__block{
+        padding: 0 5%;
+        margin-bottom: 30px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+      &__icon{
+        width: 60px;
+        height: 60px;
+        border: 1px solid $anotherColor;
+        font-size: 13px;
+        margin-bottom: 15px;
+      }
+      &__topic{
+        @include textDecor($darkColor, 11px, $textStyle2, 500, uppercase, none, 0.1em, 1);
+        margin-bottom: 10px;
+      }
+      &__text{
+        @include textDecor(rgb(167, 167, 167), 10px, $textStyle2, 400, none, none, 0.05em, 1.3em);
+      }
+    }
+    
+    .price{
+      flex-direction: column;
+      margin-top: 40px;
+      &__description{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+      &__icon{
+        width: 70px;
+        height: 70px;
+        border: 1px solid $anotherColor;
+        font-size: 15px;
+        margin-bottom: 15px;
+      }
+      &__topic{
+        @include textDecor($darkColor, 11px, $textStyle2, 600, uppercase, none, 0.1em, 1);
+        margin-bottom: 10px;
+      }
+      &__text{
+        @include textDecor(rgb(167, 167, 167), 10px, $textStyle2, 400, none, none, 0.05em, 1.3em);
+        text-align: center;
+      }
+      .tariffs{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        &__basic, &__gold, &__silver{
+          width: 220px;
+          height: 340px;
+          margin-bottom: 20px;
+        }
+        &__basic, &__silver{
+          border: 1px solid rgb(201, 201, 201);
+        }
+        &__gold{
+          height: 340px;
+          border: 1px solid rgb(201, 201, 201);
+        }
+        &__cost{
+          @include textDecor($darkColor, 12px, $textStyle2, 500, uppercase, none, 0.05em, 1);
+        }
+        &__list{
+          li{
+            @include textDecor(rgb(167, 167, 167), 10px, $textStyle2, 400, capitalize, none, 0.1em, 0);
+          }
+        }
+        &__btn{
+          width: 110px;
+          height: 30px;
+          @include textDecor($darkColor, 10.5px, $textStyle2, 500, uppercase, none, 0.05em, 0);
+          border-width: 1px;
+        }
+      }
+    }
+  }
+
+  // Clients
+  .company{
+    padding-bottom: 10px;
+    &__case{
+      height: 250px;
+    }
+    &__topic{
+      @include textDecor($lightColor, 14px, $textStyle1, 500, uppercase, none, 0.1em, 0);
+      margin-bottom: 25px;
+    }
+    &__logos{
+      justify-content: space-around;
+      padding: 0 10px;
+      img{
+        width: 65px;
+        height: 45px;
+        padding: 0 10px;
+      }
+    }
+  }
+
+  // Contact
+  .contact{
+    padding: 30px 0;
+    .begin{
+      margin-bottom: 30px;
+      h2{
+        margin-right: 5px;
+      }
+      &__line{
+        height: 44px;
+        width: 1px;
+        background: $basicColor;
+        margin-right: 7px;
+      }
+      &__text{
+        @include textDecor($darkColor, 8px, $textStyle2, 400, uppercase, none, 0.1em, 1.3em);
+      }
+    }
+
+    .information{
+      &__enter{
+        margin-bottom: 30px;
+      }
+      &__topic{
+        @include textDecor($darkColor, 11px, $textStyle2, 500, uppercase, none, 0.05em, 1);
+      }
+      &__input{
+        @include textDecor($darkColor, 11px, $textStyle1, 400, none, none, 0.05em, 1.3em);
+        border: 1px solid rgb(201, 201, 201);
+      }
+      &__textarea{
+        @include textDecor($darkColor, 11px, $textStyle1, 400, none, none, 0.05em, 1.3em);
+        border: 1px solid rgb(201, 201, 201);
+      }
+      &__btn{
+        width: 90px;
+        height: 30px;
+        border: 1px solid $basicColor;
+        @include textDecor($darkColor, 11px, $textStyle2, 500, uppercase, none, 0.05em, 0);
+      }
+      &__text{
+        @include textDecor(rgb(167, 167, 167), 10px, $textStyle2, 400, none, none, 0.05em, 1.3em);
+      }
+      &__icon-info{
+        width: 30px;
+        height: 30px;
+        font-size: 10px;
+      }
+      &__text-info{
+        @include textDecor($darkColor, 11px, $textStyle2, 400, none, none, 0.1em, 0);
+      }
+    }
+  }
+
+  // Map
+  .map{
+    &__chart{
+      height: 250px;
+    }
+  }
+
+  // Footer
+  .footer{
+    padding: 25px;
+    &__text{
+      @include textDecor($darkColor, 8px, $textStyle2, 400, uppercase, none, 0.1em, 1);
+      margin-bottom: 10px;
+    }
+    &__links{
+      a{
+        font-size: 10px;
+        margin-left: 10px;
+      }
+    }
+  }
+}
